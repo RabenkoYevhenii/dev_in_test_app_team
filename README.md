@@ -22,3 +22,26 @@
 ### Login credentials
 login - qa.ajax.app.automation@gmail.com
 password - qa_automation_password
+
+### SetUp
+#### Налаштування емулятору:
+1) Запустити ваш емулятор на Android 13 з встановленим додатком Ajax.
+2) У налаштуваннях у розділі "Про пристрій" чи аналогічному 7-10 разів
+натиснути на "Номер збірки пристрою" щоб активувати режим розробника.
+3) У налаштуваннях для розробника увімкнути "USB Debugging"
+
+#### Запуск тестів
+1) Встановлення/оновлення requirements:
+```bash
+pip install -r requirements.txt
+```
+
+2) У вікні терміналу створити appium сервер:
+```bash
+appium
+```
+
+3) Відкрити друге вікно терміналу та запустити тести:
+```bash
+pytest -s tests\login\test_login.py
+```
